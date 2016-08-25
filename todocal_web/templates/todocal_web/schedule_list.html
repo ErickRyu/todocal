@@ -6,7 +6,7 @@
 		<div class = "date">
 			<p> {{ schedule.start_time }} ~  {{ schedule.end_time }}</p>
 		</div>
-		<h1><a href="">{{schedule.name}} </a> </h1>
+		<h1><a href="{% url 'schedule_detail' pk=schedule.pk %}">{{schedule.name}} </a> </h1>
 		<p> {{schedule.memo | linebreaksbr }} </p>
 		
 	</div>

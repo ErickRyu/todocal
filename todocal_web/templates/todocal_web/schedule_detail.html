@@ -1,0 +1,12 @@
+{% extends 'todocal_web/base.html' %}
+
+{% block content %}
+  <div class="schedule">
+      
+    <div class="date">
+        {{ schedule.start_time }} ~ {{ schedule.end_time }}
+    </div>
+    <h1>{{ schedule.name }}</h1>
+    <p>{{ schedule.memo|linebreaksbr }}</p>
+  </div>
+{% endblock %}

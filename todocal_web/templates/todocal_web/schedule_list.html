@@ -1,0 +1,14 @@
+{% extends 'todocal_web/base.html' %}
+
+{% block content %}
+	{% for schedule in schedules %}
+	<div class = "schedule">
+		<div class = "date">
+			<p> {{ schedule.start_time }} ~  {{ schedule.end_time }}</p>
+		</div>
+		<h1><a href="">{{schedule.name}} </a> </h1>
+		<p> {{schedule.memo | linebreaksbr }} </p>
+		
+	</div>
+	{% endfor %}
+{%endblock content %}

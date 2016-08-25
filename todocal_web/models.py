@@ -10,8 +10,8 @@ class User(models.Model):
     return self.name
 
 class Schedule(models.Model):
-  start_time = models.DateField()
-  end_time = models.DateField()
+  start_time = models.DateTimeField()
+  end_time = models.DateTimeField()
   name = models.CharField(max_length=50)
   memo = models.TextField()
   user = models.ForeignKey(User, on_delete=models.CASCADE)
